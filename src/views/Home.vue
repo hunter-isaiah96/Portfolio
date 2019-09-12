@@ -21,7 +21,7 @@ export default {
   },
   mounted () {
     this.$prismic.getApi(this.$apiEntryPoint)
-      .then(api => api.query(this.$prismic.Predicates.at('document.type', 'project'), { orderings: '[document.first_publication_date desc]' }))
+      .then(api => api.query(this.$prismic.Predicates.at('document.type', 'project'), { orderings: '[my.project.year desc]' }))
       .then(response => (this.projects = response.results))
   },
   watch: {
