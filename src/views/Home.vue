@@ -6,7 +6,7 @@
             <router-link class="fade" :to="{ name: 'viewer', params: { id: item.id }}">{{item.data.sections[0].header[0].text}}</router-link>
             <p>{{item.data.project_type}} - {{item.data.year}}</p>
           </h1>
-          <router-link class="image" :to="{ name: 'viewer', params: { id: item.id }}"><img class="fade" :src="item.data.sections[0].image.url" /></router-link>
+          <router-link class="media" :to="{ name: 'viewer', params: { id: item.id }}"><img class="fade" :src="item.data.sections[0].media.url" /></router-link>
       </li>
     </ul>
   </div>

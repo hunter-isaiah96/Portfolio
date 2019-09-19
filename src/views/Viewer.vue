@@ -7,8 +7,11 @@
           {{body.text}}
         </p>
       </h2>
-      <div class="image" v-viewer v-if="item.image.url">
-        <img :src="item.image.url" />
+      <div class="media" v-viewer v-if="item.media.url">
+        <img :src="item.media.url" v-if="item.media.kind == 'image'" />
+        <video preload="auto" loop muted autoplay v-else>
+          <source :src="item.media.url" type="video/webm" />
+        </video>
       </div>
     </div>
     <a class="source" v-if="post.source_code.url" :href="post.source_code.url">Source Code</a>
