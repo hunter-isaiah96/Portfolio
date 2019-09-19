@@ -10,7 +10,7 @@
       <div class="media" v-viewer v-if="item.media.url">
         <img :src="item.media.url" v-if="item.media.kind == 'image'" />
         <video preload="auto" loop muted autoplay v-else>
-          <source :src="item.media.url" type="video/webm" />
+          <source :src="item.media.url" />
         </video>
       </div>
     </div>

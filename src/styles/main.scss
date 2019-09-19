@@ -46,6 +46,7 @@ header {
     padding-left: 5%;
     img {
       width: 100%;
+      overflow: hidden;
     }
   }
 }
@@ -76,12 +77,13 @@ h2.project-info {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-    img {
+    img, video {
       width: 100%;
-      cursor: pointer;
+      max-height: 800px;
+      
     }
-    video {
-      height: 50em;
+    img {
+      cursor: pointer;
     }
   }
   a.source {
@@ -122,7 +124,7 @@ h2.project-info {
 
   .projects li {
     display: block;
-    .image {
+    .media {
       padding-left: 0;
     }
   }
